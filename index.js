@@ -24,17 +24,23 @@ studentGrade();
 //End of challenge 1
 
 //Challenge 2: Speed detector
-/*
-speed = prompt("Please input speed");
-if (speed <=70) {
-    console.log("OK");
-}
-    else if(speed > 70){
+function speedDetector() {
+    let speed = prompt(`Input speed in KM/H`)//Prompts user for vehicle speed
+    if (speed <= 70){
+        console.log(`OK`);//if speed equals or does not exceed 70 then no action needs to be taken
+    }
+    else if (speed > 70){
         let points = (speed - 70) / 5;
-        console.log('Your points are'${points})
+        if (points <= 12){
+            console.log(`Your points are: ${points}`);
+        }
+        else if (points > 12){
+            console.log(`Your license is suspended`)
+        }
 
+    }
 }
-*/
+speedDetector();
 
 //Code challenge 3: Net salary calculator
 function netSalary() {
