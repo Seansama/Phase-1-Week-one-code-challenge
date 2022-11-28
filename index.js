@@ -36,3 +36,18 @@ if (speed <=70) {
 }
 */
 
+//Code challenge 3: Net salary calculator
+function netSalary() {
+let basicSalary = parseInt(prompt("Please enter your basic salary"));
+let benefits =parseInt(prompt('Please enter your total benefits'));//allowances + bonus on pay
+    let grossSalary = (basicSalary + benefits);//total earnings without any deductions
+    let nssf = grossSalary * 0.06;//nssf deduction: 6% of salary
+    let nhif = parseInt(prompt('Enter total nhif deduction'));//total nhif deductions
+    let paye = 0.2 * grossSalary;//income tax 20% of gross pay
+    let totalDeductions = paye+nhif+nssf;
+    let netSalary = grossSalary - totalDeductions;
+    console.log(`Your gross pay is ${grossSalary}`);
+    console.log(`Your paye deduction is ${paye}`);
+    console.log(`Your net pay is ${netSalary}`);
+}
+netSalary();
